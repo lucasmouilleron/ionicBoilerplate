@@ -1,0 +1,22 @@
+{
+  "host":"localhost",
+  "baseURL":"ionicBoilerplate",
+  "homeURL": "http://localhost/ionicBoilerplate",
+
+  "sassDir":"../www/css",
+  "jsDevDir": "../www/js",
+  "cssDir":"../www/css",
+  "imgDir": "../www/img",
+  "fontsDir": "../assets/fonts",
+  "jsDir": "../www/js",
+  
+  "cleanFiles":["node_modules", ".sass-cache", "../_dev/js/libs/vendor"],
+  "copyFiles":{
+  },
+  
+  "installCommands":[
+    "echo 'yeah'",
+    "ls"
+  ]
+  
+}

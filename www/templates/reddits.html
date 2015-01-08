@@ -1,0 +1,13 @@
+<ion-view view-title="Reddits">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="reddit in reddits">
+        {{reddit.title}}
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll
+    on-infinite="loadMore()"
+    distance="1%">
+  </ion-infinite-scroll>
+  </ion-content>
+</ion-view>

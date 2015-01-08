@@ -1,0 +1,12 @@
+/*///////////////////////////////////////////////////////////////////////////*/
+@import "compass/css3";
+@import "compass/reset";
+@include global-reset();
+
+/*///////////////////////////////////////////////////////////////////////////*/
+@import "CSS:../js/libs/vendor/bootstrap/dist/css/bootstrap.min";
+@import "CSS:../js/libs/vendor/angular-growl-v2/build/angular-growl";
+$ionicons-font-path: "../js/libs/vendor/ionic/fonts" !default;
+@import "../js/libs/vendor/ionic/scss/ionic";
+
+
