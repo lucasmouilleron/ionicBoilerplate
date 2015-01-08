@@ -1,6 +1,11 @@
 ionicBoilerplate
 ================
 
+Features
+--------
+- Stack : scss, ionic, angular
+- Build : install, build, watch, grunt, bower
+
 Install requirements
 --------------------
 - Install NodeJS : http://nodejs.org/download

@@ -31,6 +31,7 @@ controllers.controller("AppCtrl", ["$scope","$ionicModal", "$timeout", function(
 
 /////////////////////////////////////////////////////////////////////
 controllers.controller("reposController", ["$scope", "githubService", "$ionicLoading", function($scope, githubService, $ionicLoading) {
+    
     $ionicLoading.show({template: "Loading..."});
     githubService.all("lucasmouilleron").then(function(repos) {
         $scope.repos = repos;
@@ -38,7 +39,6 @@ controllers.controller("reposController", ["$scope", "githubService", "$ionicLoa
     });
 
     $scope.doRefresh = function() {
-        $ionicLoading.show({template: "Loading..."});
         githubService.all("lucasmouilleron").then(function(repos) {
             $scope.repos = repos;
             $scope.$broadcast("scroll.refreshComplete");
@@ -56,6 +56,7 @@ controllers.controller("redditsController", ["$scope", "redditService", "$ionicL
             loading = true;
             return redditService.from(next).then(function(redditsResponse) {
                 next = redditsResponse.next;
+                console.log(redditsResponse.items);
                 for (i in redditsResponse.items) {
                     $scope.reddits.push(redditsResponse.items[i]);
                 }
