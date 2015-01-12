@@ -2,7 +2,7 @@
 var services = angular.module("app.services", []);
 
 /////////////////////////////////////////////////////////////////////
-services.factory("githubService", ["$http", "$q", "growl", function($http, $q, growl) {
+services.factory("githubService", function($http, $q, growl) {
     var repos = {};
     return {
         all: function(username) {
@@ -22,10 +22,10 @@ services.factory("githubService", ["$http", "$q", "growl", function($http, $q, g
             return deferred.promise;
         }
     }
-}]);
+});
 
 /////////////////////////////////////////////////////////////////////
-services.factory("redditService", ["$http", "$q", "growl", function($http, $q, growl) {
+services.factory("redditService", function($http, $q, growl) {
     var reddits = {"next":0, "items":[]};
     return {
         from: function(after) {
@@ -53,4 +53,4 @@ services.factory("redditService", ["$http", "$q", "growl", function($http, $q, g
             return deferred.promise;
         }
     }
-}]);
+});

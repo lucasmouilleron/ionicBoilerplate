@@ -2,7 +2,7 @@
 var controllers = angular.module("app.controllers", []);
 
 /////////////////////////////////////////////////////////////////////
-controllers.controller("AppCtrl", ["$scope","$ionicModal", "$timeout", function($scope, $ionicModal, $timeout) {
+controllers.controller("AppCtrl", function($scope, $ionicModal, $timeout) {
 
     $scope.loginData = {};
 
@@ -27,10 +27,10 @@ controllers.controller("AppCtrl", ["$scope","$ionicModal", "$timeout", function(
             $scope.closeLogin();
         }, 1000);
     };
-}])
+});
 
 /////////////////////////////////////////////////////////////////////
-controllers.controller("reposController", ["$scope", "githubService", "$ionicLoading", function($scope, githubService, $ionicLoading) {
+controllers.controller("reposController", function($scope, githubService, $ionicLoading) {
     
     $ionicLoading.show({template: "Loading..."});
     githubService.all("lucasmouilleron").then(function(repos) {
@@ -44,10 +44,10 @@ controllers.controller("reposController", ["$scope", "githubService", "$ionicLoa
             $scope.$broadcast("scroll.refreshComplete");
         });
     };
-}]);
+});
 
 /////////////////////////////////////////////////////////////////////
-controllers.controller("redditsController", ["$scope", "redditService", "$ionicLoading", function($scope, redditService, $ionicLoading) {
+controllers.controller("redditsController", function($scope, redditService, $ionicLoading) {
     var next = 0;
     var loading = false;
     $scope.reddits = [];
@@ -67,4 +67,4 @@ controllers.controller("redditsController", ["$scope", "redditService", "$ionicL
         }
     };
     $scope.loadMore();
-}]);
+});
