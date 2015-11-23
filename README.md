@@ -1,6 +1,10 @@
 ionicBoilerplate
 ================
 
+An Ionic framework boilerplate.
+
+![Screenshot](http://grabs.lucasmouilleron.com/Screen%20Shot%202015-11-23%20at%2015.33.40.png)
+
 Features
 --------
 - Stack : scss, ionic, angular
